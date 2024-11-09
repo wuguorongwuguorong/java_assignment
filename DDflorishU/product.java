@@ -3,9 +3,9 @@ import java.util.Scanner;
 
 public class product{
 
-    private String SKU;
-    private String name;
-    private double costPrice;
+    protected String SKU;
+    protected String name;
+    protected double costPrice;
     
     private static int PRODUCT_COUNT = 0;
     public static int getProductCount() {
