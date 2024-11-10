@@ -55,7 +55,17 @@ public class product{
         }
     }
 
-    
+    @Override
+    public String toString() {
+        return "Product [sku=" + SKU + ", name=" + name + ", price=" + costPrice + "]";
+    }
+
+    public void displayDetails() {
+        System.out.println("Product: " + name);
+        System.out.println("SKU: " + SKU);
+        System.out.println("Price:" + costPrice);
+
+    }
     //public abstract double calculateSalesTax();
 
     //@Override

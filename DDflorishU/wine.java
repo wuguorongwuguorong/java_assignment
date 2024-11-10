@@ -53,5 +53,19 @@ public class wine extends product{
             throw new IllegalArgumentException("Please indicate the year");
         }
     }
-    
+    @Override
+    // @Override is a reminder to the developer that this method
+    // acutally exists in the parent class and we are overriding it
+    public void displayDetails() {
+        // call the parent's version of displayDetails
+        super.displayDetails();
+        System.out.println("Country: " + country);
+        System.out.println("Taste: " + taste);
+        System.out.println("Year: " + year);
+    }
+
+    // @Override
+    //public void edit(Scanner sc) {
+   //     super.edit(sc); // call parent version of edit
+   // }
 }
