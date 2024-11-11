@@ -83,6 +83,12 @@ public class product{
             setCostPrice(Double.parseDouble(productPrice));
         }
     }
+
+    //public void remove(Scanner sc){
+    //    System.out.println();
+    //    var p = catalog.length()-1;
+    //    for (int i = 0; i < catalog.size(); i++) {
+   // }
     //public abstract double calculateSalesTax();
 
     //@Override
