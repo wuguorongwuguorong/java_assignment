@@ -66,6 +66,23 @@ public class product{
         System.out.println("Price:" + costPrice);
 
     }
+
+    public void edit(Scanner sc){
+        System.out.println("Enter the new product name or press [Enter] to remain unchanged.");
+        String productName = sc.nextLine();
+
+        setName(productName.length() > 0 ? productName : this.name);
+
+        System.out.println("Enter the new SKU pr press[Enter] to remain unchanged.");
+        String productSku = sc.nextLine();
+        setSKU(productSku.length() > 0 ? productSku : this.SKU);
+
+        System.out.println("Enter the new cost price pr press[Enter] to remain unchanged.");
+        String productPrice = sc.nextLine();
+        if(productPrice.length()> 0){
+            setCostPrice(Double.parseDouble(productPrice));
+        }
+    }
     //public abstract double calculateSalesTax();
 
     //@Override

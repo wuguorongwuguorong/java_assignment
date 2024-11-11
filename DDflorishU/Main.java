@@ -19,7 +19,7 @@
                     addProduct();
                 }
                 if (choice == 3) {
-                    System.out.println("Delete product");
+                    updateProduct();
                 }
                 if (choice == 4) {
                     System.out.println("Delete product");
@@ -116,5 +116,16 @@
                 p.displayDetails();
         
             }
+        }
+
+        private static void updateProduct(){
+            System.out.println();
+            System.out.println("Choose a product to edit");
+            displayProducts();
+            int productIndex = sc.nextInt();
+            sc.nextLine();
+
+            product p = catalog.get(productIndex);
+            p.edit(sc);
         }
     }
