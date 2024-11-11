@@ -49,6 +49,7 @@
             System.out.println("3. Update product");
             System.out.println("4. Delete product");
             System.out.println("5. Quit");
+            System.out.println("Please entter a selection:");
             int choice = sc.nextInt();
             sc.nextLine(); // clear the input buffer
             return choice;
@@ -127,5 +128,15 @@
 
             product p = catalog.get(productIndex);
             p.edit(sc);
+        
         }
+        private static void deleteProduct(){
+            System.out.println();
+            System.out.println("Choose a product to delete");
+            displayProducts();
+            int productIndex = sc.nextInt();
+            sc.nextLine();
+
+            product p = catalog.get(productIndex);
+            p.remove(sc);
     }

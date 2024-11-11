@@ -64,8 +64,23 @@ public class wine extends product{
         System.out.println("Year: " + year);
     }
 
-    // @Override
-    //public void edit(Scanner sc) {
-   //     super.edit(sc); // call parent version of edit
-   // }
+     @Override
+    public void edit(Scanner sc) {
+       super.edit(sc); // call parent version of edit
+       System.out.println("Enter the new Country pr press[Enter] to remain unchanged. ");
+       String productCountry = sc.nextLine();
+       setCountry(productCountry.length() > 0 ? productCountry : this.country);
+
+       System.out.println("Enter the new Taste pr press[Enter] to remain unchanged. ");
+       String productTaste = sc.nextLine();
+       setTaste(productTaste.length() > 0 ? productTaste : this.taste);
+
+       System.out.println("Enter the new Year pr press[Enter] to remain unchanged. ");
+       String productYear = sc.nextLine();
+       if(productYear.length() > 0){
+            setYear(Integer.parseInt(productYear));
+       }
+    }
+
+    
 }

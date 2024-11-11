@@ -44,6 +44,24 @@ public class flowers extends product {
         }
     }
     
+    @Override
+    public  void displayDetails(){
+        super.displayDetails();
+        System.out.println("Description: " + description);
+        System.out.println("Colour: " + colour);
+    }
+    @Override
+    public void edit(Scanner sc) {
+       super.edit(sc); // call parent version of edit
+       System.out.println("Enter new Description or press[Enter] to remain unchanged.");
+       String productDescription = sc.nextLine();
+       setDescription(productDescription.length() > 0 ? productDescription : this.description);
+
+       System.out.println("Enter New colour or press [Enter] to remain unchanged.");
+       String productColour = sc.nextLine();
+       setColour(productColour.length() > 0 ? productColour : this.colour);
+
+    }
     
     
 }
